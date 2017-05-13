@@ -1,6 +1,6 @@
-@CHARSET "ISO-8859-1";
+@CHARSET "utf-8";
 footer {
-  background-color: #8c0000;
+  background-color: #8c1020;
   position: absolute;
   bottom: -150%;
   width: auto;
@@ -25,20 +25,19 @@ footer {
 	width:auto;
 	height:150px;
 	position:fixed;
-	background-color:#8c0000;
+	background-color:#8c1020;
     box-sizing:border-box;
 	font-family: Georgia, "Times New Roman";
 }
-#masInformacion{
-	width:1260px;
-height:150px;
+#masInformacion {
+	width: 1260px;
+	height: 150px;
 	font-family: Georgia, "Times New Roman";
-	color:#800000;
-	
-	
+	color: #8c1020;
 }
+
 #container{
-	 background-image: href("fondo.jpg");
+	 background-image: href("fond.jpg");
 }
 .menus{
 	display:inline-block;
@@ -55,7 +54,7 @@ height:150px;
 	font-size: 18px;
 	align:center;
 	font-family:  "Times New Roman";
-	background:#800000;
+	background:#8c1020;
 	
 }
 .menus ul li{
