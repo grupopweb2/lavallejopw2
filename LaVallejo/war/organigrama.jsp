@@ -5,8 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Organigrama</title>
-<link rel="icon" type="image/png" href="logo.png"> 
-<link rel="stylesheet" href="estilobasico.css">
+<link rel="icon" type="image/png" href="img/logo.png"> 
+<link rel="stylesheet" href="css/estilobasico.css">
 
 </head>
 <body>
@@ -15,15 +15,16 @@
   </header>
  <aside>
    <ul class="navbar">
-   <li><a href="vision.jsp"><div class='barra'></div><p class='menu'>Vision</p></a></li>
-   <li><a href="descripcion.jsp"><div class='barra'></div><p class='menu'>Descripcion</p></a></li>
-   <li><a href="ingresantes.jsp"><div class='barra'></div><p class='menu'>Ingresantes</p></a></li> 
-	<li><a href='http://lab01-20163272.appspot.com/'><div class='barra'></div><p class='menu'>Salir</p></a></li>
+   <li><a href="descripcion.jsp"><div class='barra'></div><p class='menu'>Nosotros Somos</p></a></li>
+   <li><a href="organigrama.jsp"><div class='barra'></div><p class='menu'>Organigrama</p></a></li>
+   <li><a href="vision.jsp"><div class='barra'></div><p class='menu'>Nuestra Vision</p></a></li>
+
+	<li><a href='index.html'><div class='barra'></div><p class='menu'>Pagina Principal</p></a></li>
   </ul>
   </aside>
  <nav>
 <ul class="stroke"> Organigrama</ul>
-<center><img style="margin:28px;" alt="" src="ORGANIGRAMA.PNG"  border="2"  /></center>
+<center><img style="margin:28px;" alt="" src="img/ORGANIGRAMA.PNG"  border="2"  /></center>
  </nav>
 <footer>
 		
@@ -39,10 +40,16 @@
 				<div class="menus">
 					<h5>Paginas Relacionadas</h5>
 					<ul>
-						<li><a href="organigrama.jsp" target='_blank'>ORGANIGRAMA</a></li>
-						<li><a href="descripcion.jsp" target='_blank'>QUIENES SOMOS</a></li>
-						<li><a href="ingresantes.jsp" target='_blank'>NUESTROS INGRESANTES</a></li>
-					</ul>
+				<li><a href="descripcion.jsp"><div class='barra'></div>
+						<p class='menu'>Nosotros Somos</p></a></li>
+				<li><a href="organigrama.jsp"><div class='barra'></div>
+						<p class='menu'>Organigrama</p></a></li>
+				<li><a href="vision.jsp"><div class='barra'></div>
+						<p class='menu'>Nuestra Vision</p></a></li>
+
+				<li><a href='index.html'><div class='barra'></div>
+						<p class='menu'>Pagina Principal</p></a></li>
+			</ul>
 				</div>
 				<div class="menus">
 					<h5>Instituciones Relacionadas</h5>
