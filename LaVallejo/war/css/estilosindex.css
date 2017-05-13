@@ -1,0 +1,378 @@
+@CHARSET "utf-8";
+
+.vallejo {
+	text-align: center;
+	padding-top: 20px
+}
+
+.menu {
+	margin-left: 90px;
+	left: 75;
+	padding: 10px;
+	position: absolute;
+	z-index: 100;
+}
+
+.menu-fixed {
+	left: 75;
+	margin: auto;
+	position: fixed;
+	z-index: 100;
+	top: 0px;
+}
+
+ul, li #a1 {
+	font-family: fantasy;
+	color: maroon;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+.primero li a {
+	background-color: black;
+	color: white;
+	text-decoration: none;
+	font-family: cursive;
+	font-size: 13.5px;
+	padding: 10px 15px;
+	display: block;
+}
+
+.primero li #aa {
+	background-color: black;
+	color: white;
+	text-decoration: none;
+	font-family: cursive;
+	font-size: 16px;
+	padding: 10px 15px;
+	display: block;
+}
+
+.primero {
+	position: relative;
+}
+
+header {
+	padding-top: 40px;
+}
+
+.primero>li {
+	float: left;
+}
+
+.primero>li a:HOVER {
+	background-color: #c0c0c0;
+}
+
+.nav>li>a:HOVER, .nav>li>a:FOCUS {
+	background-color: #c0c0c0;
+}
+
+#imagenes {
+	position: absolute;
+	top: 210px;
+	left: 0px;
+}
+
+#imagenes img {
+	height: 1800px;
+}
+
+.primero li ul {
+	display: none;
+	position: relative;
+	min-width: 140px;
+}
+
+.primero li:HOVER>ul {
+	display: block;
+}
+
+.primero li ul li {
+	position: relative;
+}
+
+.primero li ul li ul {
+	right: -140px;
+	top: 0px;
+}
+
+#aaa {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: underline;
+	font-size: 12px;
+	text-shadow: blue;
+}
+
+#encabezado {
+	color: white;
+	text-align: center;
+	padding: 5px;
+	height: 90px;
+}
+
+#titulo {
+	float: left;
+	position: absolute;
+	top: 40px;
+	font-size: 20pt;
+}
+
+#formularioAcceso {
+	font-size: 10pt;
+	position: absolute;
+	width: 600px;
+	top: 25px;
+	left: 700px;
+	height: 100px;
+}
+
+#formularioRegistro {
+	position: absolute;
+	left: 980px;
+	top: 70px;
+	font-size: 9pt;
+}
+
+#olvido {
+	position: absolute;
+	top: 70px;
+	left: 730px;
+	width: 300px;
+	font-size: 9pt;
+}
+
+#login {
+	position: absolute;
+	left: 1080px;
+	top: 70px;
+	font-size: 9pt;
+}
+
+#menu-bar {
+	background-color: blue;
+	position: absolute;
+	left: 240px;
+	width: 1000px;
+	height: 50px;
+}
+
+#promociones {
+	background-color: yellow;
+	position: absolute;
+	top: 220px;
+	left: 240px;
+	width: 1000px;
+	height: 400px;
+}
+
+#hoteles {
+	background-color: green;
+	position: absolute;
+	top: 625px;
+	left: 240px;
+	width: 500px;
+	height: 500px;
+}
+
+#paquetes {
+	background-color: red;
+	position: absolute;
+	top: 625px;
+	left: 740px;
+	width: 500px;
+	height: 500px;
+}
+
+#piePagina {
+	color: white;
+	background-color: black;
+	position: absolute;
+	top: 1130px;
+	left: 240px;
+	width: 1000px;
+	height: 150px;
+}
+
+#inu {
+	text-align: left;
+	padding-left: 0px;
+	heigth: 20px;
+}
+
+button {
+	background-color: #04B431;
+	color: white;
+}
+
+h3 {
+	color: white;
+}
+
+#vuelo {
+	position: relative;
+	top: 110px;
+	background-color: #0B0B61;
+	text-align: center;
+	heigth: 10px;
+	width: 500px;
+	margin: o auto;
+}
+
+h4 {
+	text-align: center;
+	color: white;
+}
+
+text {
+	color: white;
+}
+
+#arriba {
+	margin-left: -100;
+}
+
+#arriba2 {
+	margin-left: -100;
+}
+
+#registrese {
+	margin-left: 100px;
+	width: 90%;
+	border-style: inherit;
+	text-align: center;
+	font-style: oblique;
+	color: teal;
+}
+
+#registrodeusuarios2 {
+	text-align: left;
+	margin-left: 400px;
+	color: teal;
+}
+
+#registrodeusuarios2 form {
+	list-style: upper-latin;
+	margin-left: 80px;
+	text-align: left;
+	width: 50%;
+	border-style: outset;
+	font-family: cursive;
+	text-indent: 20px;
+}
+
+.rper {
+	margin-top: 100px;
+}
+
+.rper form {
+	text-align: center;
+	margin-left: 500px;
+	width: 30%;
+	border-style: outset;
+	font-family: cursive;
+	font-size: 15px;
+	border-color: aqua;
+}
+
+.bot {
+	background-color: aqua;
+	font-family: cursive;
+}
+
+#tot {
+	top: 600px;
+}
+
+#total {
+	top: 900px;
+	margin-left: 250px;
+	display: table;
+	text-align: center;
+	font-family: cursive;
+	font-style: italic;
+	border-style: groove;
+}
+
+#fila {
+	display: table-row;
+	background-color: gray;
+	text-shadow: blue;
+	text-align: center;
+}
+
+#columna1, #columna2, #columna3, #columna4, #columna5, #columna6 {
+	display: table-cell;
+	text-align: center;
+	background-color: #c0c0c0;
+	width: 10%;
+	color: black;
+}
+
+#column1, #column2, #column3, #column4, #column5, #column6 {
+	display: table-cell;
+	text-align: center;
+	background-color: highlight;
+	width: 10%;
+	color: black;
+	border-style: outset;
+}
+
+.pie {
+	border-top: 15px double #ffffff;
+	position: absolute;
+	margin-top: 1000px;
+	background-color: #408080;
+	width: 100%;
+}
+
+.subpie {
+	margin-left: 1000px;
+}
+
+#pi, #pi2 {
+	width: 45px;
+	height: 40px;
+}
+
+.despie {
+	position: absolute;
+	border-top: 15px double #ffffff;
+	margin-top: 1080px;
+	background-color: #88bdb6;
+	width: 100%;
+	height: 50px;
+}
+
+#contenedor {
+	margin-left: 400px;
+	display: table;
+	width: 50%;
+}
+
+#contenidos {
+	display: table-row;
+}
+
+#columa1, #columa2, #columa3 {
+	display: table-cell;
+}
+
+#columa0 {
+	display: table-cell;
+	color: #0000ff;
+}
+
+#piii {
+	position: absolute;
+	margin-top: 800px;
+}
+
+#fusuario {
+	top: 400px;
+}
