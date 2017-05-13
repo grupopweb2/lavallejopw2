@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<link rel="icon" type="image/png" href="img/logo.png">
+<link rel="stylesheet" href="css/estilobasico.css">
+<meta charset="utf-8">
+<title>Registrar</title>
 </head>
 <body>
+<header>
+	<p class='titulo'><h1>LA VALLEJO</h1></p>
+  </header>
+ <aside>
+   <ul class="navbar">
+   <li><a href="registrar.html"><div class='barra'></div><p class='menu'>Registrarse</p></a></li>
+   
+	<li><a href='index.html'><div class='barra'></div><p class='menu'>Pagina Principal</p></a></li>
+  </ul>
+  </aside>
+   <nav>
+   <ul class="stroke">Registrar </ul>
 <center>
 <form name="formMatricula" action="/matricula" method="post">
+<fieldset><legend>MATRICULAS ONLINE</legend>
 		<table>
-			<caption>MATRICULAS ONLINE</caption>
+			
 			<tr>
 				<td>Nombres:</td>
 				<td><input type="text" name="nombres" required></td>
@@ -18,7 +33,7 @@
 				<td><input type="text" name="apellidos" required></td>
 			</tr>
 			<tr>
-				<td>Género:</td>
+				<td>GÃ©nero:</td>
 				<td><select name="genero">
 						<option value="masculino">Masculino</option>
 						<option value="femenino">Femenino</option>
@@ -52,7 +67,7 @@
 				<td><input type="text" name="dni" required></td>
 			</tr>
 			<tr>
-				<td>Grupo sanguíneo:</td>
+				<td>Grupo sanguÃ­neo:</td>
 				<td>
 					<select name="grupoSanguineo">
 						<option value"o">O</option>
@@ -69,7 +84,7 @@
 
 			</tr>
 			<tr>
-				<td colspan="2"><marquee>LUGAR DE ORIGEN</marquee><td>
+				<td colspan="2">LUGAR DE ORIGEN<td>
 			</tr>
 			<tr>
 				<td>Nacionalidad:</td>
@@ -80,7 +95,7 @@
 				<td><input type="text" name="departamento" required></td>
 			</tr>
 			<tr>
-				<td colspan="2"><marquee>RADICA EN</marquee><td>
+				<td colspan="2">RADICA EN<td>
 			</tr>
 			<tr>
 				<td>Provincia:</td>
@@ -91,14 +106,14 @@
 				<td><input type="text" name="distrito" required></td>
 			</tr>
 			<tr>
-				<td>Dirección:</td>
+				<td>DirecciÃ³n:</td>
 				<td><input type="text" name="direccion" required></td>
 			</tr>
 			<tr>
-				<td colspan="2"><marquee>DATOS ADICIONALES</marquee><td>
+				<td colspan="2">DATOS ADICIONALES<td>
 			</tr>
 			<tr>
-				<td>Correo electrónico:</td>
+				<td>Correo electrÃ³nico:</td>
 				<td><input type="text" name="email"></a></td>
 			</tr>
 			<tr>
@@ -112,7 +127,9 @@
 					type="submit" name="Siguiente"></td>
 			</tr>
 		</table>
+		<fieldset>
 	</form>
 	</center>
+	 </nav>
 </body>
 </html>
