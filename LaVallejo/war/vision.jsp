@@ -1,11 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
   	<meta http-equip="Content-type" content="text/html;charset=UTF-8">
     <title>Inicio</title>
- 	<link rel='stylesheet' href='estilobasico.css'>
+    <link rel="icon" type="image/png" href="img/logo.png">
+ 	<link rel='stylesheet' href='css/estilobasico.css'>
   </head>
   <body>
 	<!-- Menu de navegacion -->
@@ -15,11 +16,12 @@
 
 	<!-- Menu de navegacion -->
   <aside>
-   <ul class="navbar">
+    <ul class="navbar">
+   <li><a href="descripcion.jsp"><div class='barra'></div><p class='menu'>Nosotros Somos</p></a></li>
    <li><a href="organigrama.jsp"><div class='barra'></div><p class='menu'>Organigrama</p></a></li>
-   <li><a href="descripcion.jsp"><div class='barra'></div><p class='menu'>Descripcion</p></a></li>
-   <li><a href="ingresantes.jsp"><div class='barra'></div><p class='menu'>Ingresantes</p></a></li> 
-	<li><a href='http://lab01-20163272.appspot.com/'><div class='barra'></div><p class='menu'>Salir</p></a></li>
+   <li><a href="vision.jsp"><div class='barra'></div><p class='menu'>Nuestra Vision</p></a></li>
+
+	<li><a href='index.html'><div class='barra'></div><p class='menu'>Pagina Principal</p></a></li>
   </ul>
   </aside>
   
@@ -50,19 +52,30 @@ Seremos reconocidos a nivel Arequipa, como la primera elección de las familias q
 Consideramos irrenunciables nuestros valores éticos y profesionales que guiando en todo momento nuestra labor, 
 nos identifican como una institución educativa seria y coherente caracterizada por:
 
-<ul type=square>
-<li>Respeto
-<li>Compromiso
-<li>Responsabilidad
-<li>Confianza
-<li>Solidaridad
-<li>Trato familiar y cordial
-<li>Trabajo en equipo
-<li>Dedicación y esfuerzo
-<li>Espíritu crítico
-<li>Gusto por el trabajo bien hecho
-<li>Innovación
-</ul>
+
+<table>
+			<tr>
+				<td>1.-</td><td>Respeto</td>
+			</tr>
+			<tr>
+				<td>2.-</td><td>Responsabilidad</td>
+			</tr>
+			<tr>
+				<td>3.-</td><td>Compromiso</td>
+			</tr>
+			<tr>
+				<td>4.-</td><td>Trato familiar y cordial</td>
+			</tr>
+			<tr>
+				<td>5.-</td><td>Trabajo en equipo</td>
+			</tr>
+			<tr>
+				<td>6.-</td><td>Dedicación y esfuerzo</td>
+			</tr>
+			
+			
+			
+		</table>
  </p>
  
 </fieldset>
@@ -75,7 +88,7 @@ nos identifican como una institución educativa seria y coherente caracterizada p
 					<ul>
 						<li><a href="mision.jsp">La Vallejo</a></li>
 						<li><a href="contactenos.jsp">Contactenos</a></li>
-						<li><a href="https://www.google.com.mx/maps/place/Av+Independencia+242,+Arequipa,+Per%C3%BA/@-16.4008852,-71.5237378,19z/data=!3m1!4b1!4m5!3m4!1s0x91424baae7cc2c27:0x28e55aa83bfd6ed5!8m2!3d-16.4008852!4d-71.5231906">Busquenos</a></li>
+						<li><a href="https://www.google.com.mx/maps/place/Av+Independencia+242,+Arequipa,+Per%C3%BA/@-16.4008852,-71.5237378,19z/data=!3m1!4b1!4m5!3m4!1s0x91424baae7cc2c27:0x28e55aa83bfd6ed5!8m2!3d-16.4008852!4d-71.5231906">Búsquenos</a></li>
 					</ul>
 				</div>
 				<div class="menus">
