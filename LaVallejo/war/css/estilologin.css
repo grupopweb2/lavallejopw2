@@ -1,5 +1,5 @@
 body{
-    background:#cc9;
+    background:#ffffff;
     font-family:Arial, Helvetica, sans-serif;
     font-size:12px;
     margin: 0;
@@ -10,41 +10,41 @@ body{
         width:80%;
         font-size:24px;
         font-weight:bold;
-        color:#FFF;
+        color:#8c1020;
         text-align:right;
 }
  
 #envoltura{
-        position:absolute;
+        
     left:50%;
     top:50%;
-    margin-left:-165px;
-    margin-top: -210px;
-    width: 330px;
+    margin-left:-150px;
+    margin-top: 10px;
+    width: 300px;
  
 }
  
 #contenedor{
-    background-color:#BF00FF;
-    box-shadow: 3px 3px 10px 5px rgba(0,0,0,.8);
+    background-color:#8c1020;
+    box-shadow: 3px 3px 2px 2px rgba(0,0,0,.8);
     -webkit-border-radius:5px;
-    -moz-border-radius:10px;
-    border-radius:10px;
+    -moz-border-radius:5px;
+    border-radius:3px;
 }
  
 #cabecera{
     border-bottom: 5px solid #333;
     padding-top: 5px;
-    height:70px;
+    height:10px;
     line-height:50px;
     text-align:center;
 }
  
 #cuerpo{
-    background:#ececec;
+    background:#8c1020;
     border:solid #ccc;
     border-width: 2px 0;
-    padding:15px 35px;
+    padding:50px 35px;
 }
  
 label{
@@ -64,17 +64,17 @@ input{
 }
  
 .boton{
-    background: #ccc;
-    background: -webkit-linear-gradient(top,#fc6,#f63);
-    background: linear-gradient(top,#fc6,#f63);
+    background: #000000;
+    background: -webkit-linear-gradient(top,red,red);
+    background: linear-gradient(top,red,red);
     /*Color del texto*/
-    color: #666;
+    color: #000000;
     width: 120px;
 }
  
 
 .boton:active{
-    position: relative;
+   
     top: 3px;
 }
  
