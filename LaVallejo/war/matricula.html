@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="icon" type="image/png" href="img/logo.png">
+<link rel="stylesheet" href="css/estilobasico.css">
 <meta charset="utf-8">
 <title>Registro de matriculas</title>
 <link rel="stylesheet" href="/css/jquery-ui.css">
@@ -35,31 +37,31 @@
 <style type="text/css">
 	
 	body {
-		background: #aaa;
+		background: white;
 	}
 	caption {
 		border-style: solid outset;
-		text-shadow: 5px 5px 5px #aaa;
+		
 		font-family: calibri;
-		background: #404040;
+		background: #8c0000;
 		color: white;
 		border-radius: .2em;
-		font-size: 300%;
+		font-size: 150%;
 	}
 	.todo {
-		width: 100%;
+		width: 96%;
 	}
 	.mitad {
-		width: 48.5%;
+		width: 46.6%;
 	}
 	
 	table {
 		border-radius: .5em;
 		border-style: solid outset;
-		text-shadow: 5px 5px 5px #aaa;
-		background: #404040;
+		
+		background: #8c0000;
 		color: white;
-		margin-top: 5em; 
+		margin-top: 3em; 
 		font-size: 100%;
 		
 	}
@@ -67,10 +69,21 @@
 </style>
 </head>
 <body>
+<header>
+	<p class='titulo'><h1>LA VALLEJO</h1></p>
+  </header>
+<aside>
+   <ul class="navbar">
+   
+	<li><a href='index.html'><div class='barra'></div><p class='menu'>Pagina Principal</p></a></li>
+  </ul>
+  </aside>
+  <nav>
+  <ul class="stroke">Bienvenido a Matricula Online</ul>
 	<center>
 	<form name="formMatricula" action="/matricula" method="get">
 		<table class="form">
-			<caption><marquee scrolldelay="250">MATRICULAS ONLINE</marquee></caption>
+			
 			<tr>
 				<td>Nombres:</td>
 				<td><input type="text" name="nombres" required></td>
@@ -189,5 +202,6 @@
 	@Persistent private String distrito;
 	@Persistent private String direccion;
 	@Persistent private String celular; -->
+ </nav>
 </body>
 </html>
