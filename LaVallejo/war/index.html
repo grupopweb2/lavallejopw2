@@ -15,6 +15,7 @@
 <title>I.E.P. LA VALLEJO</title>
 <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
+
 <style type="text/css">
 body {
 	color: black;
@@ -24,15 +25,26 @@ div {
 	background: #8c1020; /* #8c0000 */
 }
 
-div.logoleft {
+div.logoLeft {
 	float: left;
 	width: 20%;
 }
 
-div.logoright {
+div.logoRight {
 	float: right;
-	width: 80%;
+	width: 70%;
 }
+
+div.logoRightLeft {
+	float: left;
+	width: 70%;
+}
+div.logoRightRight {
+	padding-top: 5em;
+	float: right;
+	width: 30%;
+}
+
 img {
 	border-radius: 3em;
 	margin: 1em;
@@ -50,10 +62,31 @@ marquee {
                9px 9px 5px #00f;
     */
 }
+ul.stroke {
+	text-align: left;
+	color: #000040;
+	background: #8c1020;
+	font-family: Brush Script MT;
+	font-size: 60px;
+	letter-spacing: 0;
+	font-weight: bold;
+	text-shadow: -1.3px -1.3px 1.3px #ffffff, 1.3px -1.3px 1.3px #ffffff,
+		-1.3px 1.3px 1.3px #ffffff, 1.3px 1.3px 1.3px #ffffff;
+}
 
 header {
 	padding-bottom: 5px;
 }
+
+input.acceder {
+	width: 100%;
+	color:  #000040;
+	font-size: 200%;
+	font-family:'Times New Roman',sans-serif; 
+	
+	text-shadow: 5px 5px 5px #ffffff;
+}
+
 </style>
 
 <!-- Start WOWSlider.com HEAD section -->
@@ -102,14 +135,42 @@ header {
 				requieren los scripts activados</h1>
 		</center>
 	</noscript>
+	
 	<div class="container">
 		<div class="logoLeft">
-			<img src="img/logo.png" width="140" height="200" align="left">
+			<img src="img/logov.gif" width="140" height="200" align="left">
 		</div>
-		<div class="logoright">
-			<marquee>INSTITUCIÓN EDUCATIVA PARTICULAR LA VALLEJO</marquee>
+		<div class="logoRight">
+			<div class="logoRightLeft">
+				
+				<ul class="stroke">Institucion Educativa "La Vallejo" </ul>
+			</div>
+			<!-- 
+			
+			
+			LOGIIIIINNNNN:
+			
+		
+			 -->
+				
+			
+			<div class="logoRightRight">
+				<form name="formAcceder" action="gmailSesion" method="get">
+					<fieldset style="border: 0.9px solid black">
+						<table>
+							<tr>
+								<td></td>
+								<td><input class="acceder" type="submit" value="acceder"></td>
+							</tr>
+						</table>
+					</fieldset>
+				</form>
+			</div>
 		</div>
 	</div>
+	
+	
+	
 	<div class="container">
 	<header>
 		<div class="container ">
@@ -144,6 +205,7 @@ header {
 						<li><a href="">Login</a>
 							<ul>
 								<li><a href="registrar.html">Registrarse</a></li>
+								<li><a href="login.html">login</a></li>
 								
 							</ul></li>
 
@@ -172,7 +234,7 @@ header {
 		<div class="carousel slide" id="miSlider">
 			<div class="carousel-inner">
 				<div class="item active">
-					<img src="img/col1.jpg" width="1200" height="400" no-repeat
+					<img src="img/col0.jpg" width="1200" height="400" no-repeat
 						alt="imagen">
 				</div>
 				<div class="item">

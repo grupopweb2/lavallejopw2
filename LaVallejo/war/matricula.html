@@ -4,7 +4,7 @@
 <link rel="icon" type="image/png" href="img/logo.png">
 <link rel="stylesheet" href="css/estilobasico.css">
 <meta charset="utf-8">
-<title>Registro de matriculas</title>
+<title>Registro de cuentas</title>
 <link rel="stylesheet" href="/css/jquery-ui.css">
 <script src="/js/jquery/jquery-1.12.4.js"></script>
 <script src="/js/jquery/jquery-ui.js"></script>
@@ -15,7 +15,7 @@
 	
 	var options = {
 			
-			inicial : ["pre-inicial", "inicial"],
+			inicial : ["preinicial", "inicial"],
 			primaria : ["1ro","2do","3ro","4to","5to","6to"],
 			secundaria : ["1ro","2do","3ro","4to","5to"],
 			preu : ["UNSA", "UCSM", "UAP", "UCSP"]
@@ -49,10 +49,10 @@
 		font-size: 150%;
 	}
 	.todo {
-		width: 96%;
+		width: 99%;
 	}
 	.mitad {
-		width: 46.6%;
+		width: 47%;
 	}
 	
 	table {
@@ -65,6 +65,7 @@
 		font-size: 100%;
 		
 	}
+	
 	
 </style>
 </head>
@@ -79,18 +80,18 @@
   </ul>
   </aside>
   <nav>
-  <ul class="stroke">Bienvenido a Matricula Online</ul>
+  <ul class="stroke">Bienvenido a registro</ul>
 	<center>
-	<form name="formMatricula" action="/matricula" method="get">
+	<form name="formMatricula" action="registro" method="get">
 		<table class="form">
 			
 			<tr>
 				<td>Nombres:</td>
-				<td><input type="text" name="nombres" required></td>
+				<td><input type="text" name="nombre" required></td>
 			</tr>
 			<tr>
 				<td>Apellidos:</td>
-				<td><input type="text" name="apellidos" required></td>
+				<td><input type="text" name="apellido" required></td>
 			</tr>
 			<tr>
 				<td>Género:</td>

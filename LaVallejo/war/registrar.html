@@ -5,6 +5,66 @@
 <link rel="stylesheet" href="css/estilobasico.css">
 <meta charset="utf-8">
 <title>Registrar</title>
+<link rel="stylesheet" href="/css/jquery-ui.css">
+<script src="/js/jquery/jquery-1.12.4.js"></script>
+<script src="/js/jquery/jquery-ui.js"></script>
+<script>
+	$(function() {
+		$("#datepicker").datepicker({dateFormat: 'dd/mm/yy', changeMonth: true, changeYear: true, yearRange: '-40:+0'});
+	});
+	
+	var options = {
+			
+			inicial : ["preinicial", "inicial"],
+			primaria : ["1ro","2do","3ro","4to","5to","6to"],
+			secundaria : ["1ro","2do","3ro","4to","5to"],
+			preu : ["UNSA", "UCSM", "UAP", "UCSP"]
+	}
+
+	$(function(){
+		var fillSecondary = function(){
+			var selected = $('#primary').val();
+			$('#secondary').empty();
+			options[selected].forEach(function(element,index){
+				$('#secondary').append('<option value="'+element+'">'+element+'</option>');
+			});
+		}
+		$('#primary').change(fillSecondary);
+		fillSecondary();
+	});
+	
+</script>
+<style type="text/css">
+	
+	body {
+		background: white;
+	}
+	caption {
+		border-style: solid outset;
+		
+		font-family: calibri;
+		background: #8c0000;
+		color: white;
+		border-radius: .2em;
+		font-size: 150%;
+	}
+	.todo {
+		width: 100%;
+	}
+	
+	table {
+		border-radius: .5em;
+		border-style: solid outset;
+		
+		background: #8c0000;
+		color: white;
+		margin-top: 3em; 
+		font-size: 100%;
+		
+	}
+	
+	
+</style>
 </head>
 <body>
 <header>
@@ -20,113 +80,63 @@
    <nav>
    <ul class="stroke">Registrar </ul>
 <center>
-<form name="formMatricula" action="/matricula" method="post">
-<fieldset><legend>MATRICULAS ONLINE</legend>
-		<table>
+
+<fieldset><legend>REGISTRO ONLINE</legend>
+		<form name="formRegistro" action="registrar" method="post">
+		<table class="form">
 			
 			<tr>
 				<td>Nombres:</td>
-				<td><input type="text" name="nombres" required></td>
+				<td><input type="text" name="nombre" required></td>
 			</tr>
 			<tr>
 				<td>Apellidos:</td>
-				<td><input type="text" name="apellidos" required></td>
+				<td><input type="text" name="apellido"  required></td>
 			</tr>
 			<tr>
 				<td>Género:</td>
-				<td><select name="genero">
+				<td><select name="genero" class="todo">
 						<option value="masculino">Masculino</option>
 						<option value="femenino">Femenino</option>
 				</select></td>
-			</tr>
-			<tr>
-				<td>Nacimiento:</td>
-				<td><input type="text" name="nacimiento" id="datepicker" required></td>
-			</tr>
-			
-			<tr>
-				<td>Nivel:</td>
-				<td><select name="nivel">
-						<option value="primaria">primaria</option>
-						<option value="secundaria">secundaria</option>
-				</select></td>
-			</tr>
-			<tr>
-				<td>Grado:</td>
-				<td><select name="grado">
-						<option value="1">1ro</option>
-						<option value="2">2do</option>
-						<option value="3">3ro</option>
-						<option value="4">4to</option>
-						<option value="5">5to</option>
-						<option value="6">6to</option>
-				</select></td>
-			</tr>
-			<tr>
-				<td>DNI:</td>
-				<td><input type="text" name="dni" required></td>
-			</tr>
-			<tr>
-				<td>Grupo sanguíneo:</td>
-				<td>
-					<select name="grupoSanguineo">
-						<option value"o">O</option>
-						<option value="a">A</option>
-						<option value="b">B</option>
-						<option value="ab">AB</option>
-					</select> 
-					<select name="factorRH">
-						<option value="frh">factor RH</option>
-						<option value="+">+</option>
-						<option value="-">-</option>
-					</select>
-				</td>
-
-			</tr>
-			<tr>
-				<td colspan="2">LUGAR DE ORIGEN<td>
-			</tr>
-			<tr>
-				<td>Nacionalidad:</td>
-				<td><input type="text" name="nacionalidad" required></td>
-			</tr>
-			<tr>
-				<td>Departamento:</td>
-				<td><input type="text" name="departamento" required></td>
-			</tr>
-			<tr>
-				<td colspan="2">RADICA EN<td>
-			</tr>
-			<tr>
-				<td>Provincia:</td>
-				<td><input type="text" name="provincia" required></td>
-			</tr>
-			<tr>
-				<td>Distrito:</td>
-				<td><input type="text" name="distrito" required></td>
 			</tr>
 			<tr>
 				<td>Dirección:</td>
 				<td><input type="text" name="direccion" required></td>
 			</tr>
 			<tr>
-				<td colspan="2">DATOS ADICIONALES<td>
-			</tr>
-			<tr>
 				<td>Correo electrónico:</td>
-				<td><input type="text" name="email"></a></td>
+					<td><input type="text"  name="email" required></a>
+				</td>
 			</tr>
 			<tr>
-				<td>Celular:</td>
-				<td><input type="text" name="celular"></td>
+				<td>Nacimiento:</td>
+				<td><input type="text" name="nacimiento" id="datepicker" required></td>
+			</tr>
+			<tr>
+				<td>Categoria:</td>
+				<td>
+					<select name="categoria"  class="todo">
+						<option value="particular">particular</option>
+						<option value="alumno">alumno</option>
+						<option value="padre">padre</option>
+					</select>
+				</td>
 			</tr>
 			
 			<tr>
+				<td>DNI:</td>
+				<td><input type="text" name="dni" required></td>
+			</tr>
+			<tr>
 				<td></td>
-				<td><input type="reset" value="Limpiar"><input
-					type="submit" name="Siguiente"></td>
+				<td>
+					<input type="reset" value="Limpiar" class="mitad">
+					<input type="submit" name="Siguiente" class="mitad">
+				</td>
 			</tr>
 		</table>
+	</form>
 		<fieldset>
 	</form>
 	</center>
