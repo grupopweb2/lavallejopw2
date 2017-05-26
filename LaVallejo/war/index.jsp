@@ -2,7 +2,11 @@
     pageEncoding="UTF-8"%>
 <%@ page import="pw2.*" %>
 <%@ page import="java.util.*" %>
-<% Persona p = (Persona)request.getAttribute("login"); %>
+<%@ page import="com.google.appengine.api.users.User" %>
+<%@ page import="com.google.appengine.api.users.UserService" %>
+<%@ page import="com.google.appengine.api.users.UserServiceFactory" %>
+<% UserService us = UserServiceFactory.getUserService(); %>
+<% User user = us.getCurrentUser(); %>
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -198,19 +202,37 @@ div.info {
 			<div class="logoRightRight info">
 				<form name="formAcceder" action="gmailSesion" method="get">
 					<fieldset style="border: 0.9px solid black">
+						<% if (user != null) { %>
+							<% if (user.getEmail().equalsIgnoreCase("rescobedo@gmail.com")) { %>
+								<script type="text/javascript">
+									window.location="indexadmin.jsp";
+								</script>
+							<% } else {%>
 						<table>
-							<caption><marquee>Bienvenido <%= p.getNombre() %> (<%= p.getCategoria() %>) </marquee></caption>
+							<caption><marquee>Bienvenido <%= user.getNickname() %> </marquee></caption>
 							
 							<tr>
 								<td>Email: </td>
-								<td><%= p.getEmail() %></td>
+								<td><%= user.getEmail() %></td>
 							</tr>
 							
 							<tr>
-								<td colspan="2" align="center"><a href="cerrarSesion">Cerrar sesion</a></td>
+								<td colspan="2" align="center"><a href="cerrarSesion"> Cerrar sesión </a></td>
 							</tr>
 							
 						</table>
+							<% }%>
+						<% } else { %>
+							<form name="formAcceder" action="gmailSesion" method="get">
+								<fieldset style="border: 0.9px solid black">
+									<table border=1>
+										<tr>
+											<td><input class="acceder" type="submit" value="acceder"></td>
+										</tr>
+									</table>
+								</fieldset>
+							</form>
+							<% } %>
 					</fieldset>
 				</form>
 			</div>
@@ -244,28 +266,28 @@ div.info {
 						<li><a href="">Matriculas</a>
 							<ul>
 								<li><a href="">Cronograma</a></li>
-								<li><a href="requisitos.html">Requisitos</a></li>
-								<li><a href="matricula.html">Matricular</a></li>
+								<li><a href="requisitos.jsp">Requisitos</a></li>
+								<li><a href="matricula.jsp">Matricular</a></li>
 							</ul></li>
 
 						<li><a href="">Pensiones</a></li>
 
 
-
+						<!--  
 						<li><a href="">Login</a>
 							<ul>
 								<li><a href="registrar.html">Registrarse</a></li>
 								<li><a href="login.html">login</a></li>
 								
 							</ul></li>
-
+						-->
 						<li><a href="">Talleres</a>
 							<ul>
-								<li><a href="deportes.html">Deportes</a></li>
-								<li><a href="TallerMatricula.html">Matricula</a></li>
+								<li><a href="deportes.jsp">Deportes</a></li>
+								<li><a href="TallerMatricula.jsp">Matricula</a></li>
 							</ul></li>
 
-						<li><a href="contactenos.html">Contactenos</a></li>
+						<li><a href="contactenos.jsp">Contactenos</a></li>
 
 
 
@@ -318,7 +340,7 @@ div.info {
 					<h5>Institución</h5>
 					<ul>
 						<li><a href="vision.jsp">La Vallejo</a></li>
-						<li><a href="contactenos.html">Contactenos</a></li>
+						<li><a href="contactenos.jsp">Contactenos</a></li>
 						<li><a href="https://www.google.com.mx/maps/place/Av+Independencia+242,+Arequipa,+Per%C3%BA/@-16.4008852,-71.5237378,19z/data=!3m1!4b1!4m5!3m4!1s0x91424baae7cc2c27:0x28e55aa83bfd6ed5!8m2!3d-16.4008852!4d-71.5231906">Busquenos</a></li>
 					</ul>
 				</div>
