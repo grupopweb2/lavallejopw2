@@ -4,9 +4,56 @@
 <html>
   <head>
   	<meta http-equip="Content-type" content="text/html;charset=UTF-8">
-    <title>Inicio</title>
+    <title>Inicio ADM</title>
+    <style type="text/css">
+   
+   .cuadro {
+	text-align: center;
+	position: absolute;
+	top: 42%;
+	left: 65%;
+	border-radius: 10px;
+	background-color: #1BAE9F;
+	width: 280px;
+	filter: alpha(opacity = 50);
+	opacity: 0.95;
+	border: 2px solid #ffffff;
+	aling-text: center;
+}
+   
+    .cuadro1 {
+	text-align: center;
+	position: absolute;
+	top: 55%;
+	left: 65%;
+	border-radius: 10px;
+	background-color: #27BF40;
+	width: 280px;
+	filter: alpha(opacity = 50);
+	opacity: 0.95;
+	border: 2px solid #ffffff;
+	left: 65%;
+	border-radius: 10px;
+	background-color: #27BF40;
+}
+
+.cuadro2 {
+	text-align: center;
+	position: absolute;
+	top: 68%;
+	left: 65%;
+	border-radius: 10px;
+	background-color: #CCA422;
+	width: 280px;
+	filter: alpha(opacity = 50);
+	opacity: 0.95;
+	border: 2px solid #ffffff;
+	position: absolute;
+}
+</style>
     <link rel="icon" type="image/png" href="img/logo.png">
  	<link rel='stylesheet' href='css/estilobasico.css'>
+ 	
   </head>
   <body>
 	<!-- Menu de navegacion -->
@@ -17,66 +64,30 @@
 	<!-- Menu de navegacion -->
   <aside>
     <ul class="navbar">
-   <li><a href="descripcion.jsp"><div class='barra'></div><p class='menu'>Nosotros Somos</p></a></li>
-   <li><a href="organigrama.jsp"><div class='barra'></div><p class='menu'>Organigrama</p></a></li>
-   <li><a href="vision.jsp"><div class='barra'></div><p class='menu'>Nuestra Vision</p></a></li>
+  
 
 	<li><a href='index.jsp'><div class='barra'></div><p class='menu'>Pagina Principal</p></a></li>
   </ul>
   </aside>
   
   <nav>
-  <ul class="stroke"> Nuestra Visión ,Misión y Valores</ul>
-<fieldset><legend>Nuestra Misión</legend>
+  <ul class="stroke"> Bienvenido a Lista alumnos</ul>
 
-<p class="parrafo">
-Somos una institucion educativa  que contamos con niveles academicos inicial, primaria, y secundaria , 
-ademas  con una plana docente altamente calificada que garantiza la preparacion de los estudiantes,
-para acceder a una educacion superior y que logren ser excelentes profesionales, personas y esten capacitados para enfrentar
-la vida.
-</p>
- 
-</fieldset>
- <br>
-<fieldset><legend>Nuestra Visión</legend>
+<div class="cuadro">
+		<br> <a href="">INICIAL<br></a> <br>
+	</div>
 
-<p class="parrafo">
-Seremos reconocidos a nivel Arequipa, como la primera elección de las familias que garantice la formación académica,
- la madurez emocional y la educación en valores necesarios para el futuro de sus hijos en un mundo tecnológico y global
- </p>
+	<div class="cuadro1">
+		<br> <a href="">PRIMARIA<br></a> <br>
+	</div>
 
-</fieldset>
- <br>
-<fieldset><legend>Valores</legend>
-<p class="parrafo">
-Consideramos irrenunciables nuestros valores éticos y profesionales que guiando en todo momento nuestra labor, 
-nos identifican como una institución educativa seria y coherente caracterizada por:
+	<div class="cuadro2">
+		<br> <a href=""> <br>SECUNDARIA<br></a>
+		<br>
+	</div>
+	
 
 
-<table>
-			<tr>
-				<td>1.-</td><td>Respeto</td>
-			</tr>
-			<tr>
-				<td>2.-</td><td>Responsabilidad</td>
-			</tr>
-			<tr>
-				<td>3.-</td><td>Compromiso</td>
-			</tr>
-			<tr>
-				<td>4.-</td><td>Trato familiar y cordial</td>
-			</tr>
-			<tr>
-				<td>5.-</td><td>Trabajo en equipo</td>
-			</tr>
-			<tr>
-				<td>6.-</td><td>Dedicación y esfuerzo</td>
-			</tr>
-			
-			
-			
-		</table>
- </p>
  
 </fieldset>
 	</nav>

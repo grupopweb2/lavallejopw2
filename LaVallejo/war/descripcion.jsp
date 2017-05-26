@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Descripcion de la Intitución</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Descripcion de la IntituciÃ³n</title>
 <link rel="icon" type="image/png" href="img/logo.png"> 
 <link rel="stylesheet" href="css/estilobasico.css">
 </head>
@@ -19,7 +19,7 @@
    <li><a href="organigrama.jsp"><div class='barra'></div><p class='menu'>Organigrama</p></a></li>
    <li><a href="vision.jsp"><div class='barra'></div><p class='menu'>Nuestra Vision</p></a></li>
 
-	<li><a href='index.html'><div class='barra'></div><p class='menu'>Pagina Principal</p></a></li>
+	<li><a href='index.jsp'><div class='barra'></div><p class='menu'>Pagina Principal</p></a></li>
   </ul>
   </aside>
   <nav>
@@ -28,10 +28,10 @@
 <fieldset><legend>Descripcion de la Institucion</legend>
 
 		<p class="parrafo">
-			Somos un institución educativa que cuenta con 17 años de experiencia
-			dedicados al rubro de la educación inicial, primaria y
+			Somos un instituciÃ³n educativa que cuenta con 17 aÃ±os de experiencia
+			dedicados al rubro de la educaciÃ³n inicial, primaria y
 			secundaria,nacimos con el objetivo de brindar la mejor educacion a
-			nuestros niños y adolecentes haciendo de ellos grandes personas con
+			nuestros niÃ±os y adolecentes haciendo de ellos grandes personas con
 			una vision ganadora. <br> Contamos con una plana docente
 			calificada que garantiza la preparacion de los estudiantes, nuestro
 			colegio <font>La Vallejo</font> busca que vuestros hijos sean
@@ -74,7 +74,7 @@
 		
 			<div id="masInformacion">
 				<div class="menus">
-					<h5>Institución</h5>
+					<h5>InstituciÃ³n</h5>
 					<ul>
 						<li><a href="mision.jsp">La Vallejo</a></li>
 						<li><a href="contactenos.jsp">Contactenos</a></li>
@@ -99,7 +99,7 @@
 				<div class="menus">
 					<h5>Sedes Arequipa</h5>
 					<UL TYPE=square>
-						<li>AV. INDEPENDENCIA N°239 URB. LA VICTORIA
+						<li>AV. INDEPENDENCIA NÂ°239 URB. LA VICTORIA
 						<li>AV.GOYENECHE 330
 					</UL> 
 					</div>

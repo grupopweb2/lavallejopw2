@@ -1,9 +1,19 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="pw2.*" %>
+<%@ page import="java.util.*" %>
+<%@ page import="com.google.appengine.api.users.User" %>
+<%@ page import="com.google.appengine.api.users.UserService" %>
+<%@ page import="com.google.appengine.api.users.UserServiceFactory" %>
+<% UserService us = UserServiceFactory.getUserService(); %>
+<% User user = us.getCurrentUser(); %>
+
+
+
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Organigrama</title>
 <link rel="icon" type="image/png" href="img/logo.png"> 
 <link rel="stylesheet" href="css/estilobasico.css">
@@ -14,23 +24,35 @@
 	<p class='titulo'><h1>LA VALLEJO</h1></p>
   </header>
  <aside>
-   <ul class="navbar">
-   <li><a href="descripcion.jsp"><div class='barra'></div><p class='menu'>Nosotros Somos</p></a></li>
-   <li><a href="organigrama.jsp"><div class='barra'></div><p class='menu'>Organigrama</p></a></li>
-   <li><a href="vision.jsp"><div class='barra'></div><p class='menu'>Nuestra Vision</p></a></li>
-
-	<li><a href='index.html'><div class='barra'></div><p class='menu'>Pagina Principal</p></a></li>
-  </ul>
+   	<ul class="navbar">
+   	<li><a href="descripcion.jsp"><div class='barra'></div><p class='menu'>Nosotros Somos</p></a></li>
+   	<li><a href="organigrama.jsp"><div class='barra'></div><p class='menu'>Organigrama</p></a></li>
+   	<li><a href="vision.jsp"><div class='barra'></div><p class='menu'>Nuestra Vision</p></a></li>
+	<li><a href='index.jsp'><div class='barra'></div><p class='menu'>Pagina Principal</p></a></li>
+  	</ul>
   </aside>
  <nav>
 <ul class="stroke"> Organigrama</ul>
+
 <center><img style="margin:28px;" alt="" src="img/ORGANIGRAMA.PNG"  border="2"  /></center>
  </nav>
+
+<% if (user != null) { %>
+<% } else { %>
+ <!-- 
+ 	<script type="text/javascript">
+		window.location="gmailSesion";
+	</script>
+	
+-->
+ <%} %>
+ 
+ 
 <footer>
 		
 			<div id="masInformacion">
 				<div class="menus">
-					<h5>Institución</h5>
+					<h5>InstituciÃ³n</h5>
 					<ul>
 						<li><a href="mision.jsp">La Vallejo</a></li>
 						<li><a href="contactenos.jsp">Contactenos</a></li>
@@ -47,7 +69,7 @@
 				<li><a href="vision.jsp"><div class='barra'></div>
 						<p class='menu'>Nuestra Vision</p></a></li>
 
-				<li><a href='index.html'><div class='barra'></div>
+				<li><a href='index.jsp'><div class='barra'></div>
 						<p class='menu'>Pagina Principal</p></a></li>
 			</ul>
 				</div>
@@ -61,7 +83,7 @@
 				<div class="menus">
 					<h5>Sedes Arequipa</h5>
 					<UL TYPE=square>
-						<li>AV. INDEPENDENCIA N°239 URB. LA VICTORIA
+						<li>AV. INDEPENDENCIA NÂ°239 URB. LA VICTORIA
 						<li>AV.GOYENECHE 330
 					</UL> 
 					</div>
