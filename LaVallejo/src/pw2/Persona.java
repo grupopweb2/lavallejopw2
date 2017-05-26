@@ -35,23 +35,28 @@ public class Persona {
 	private String nacimiento;
 	
 	@Persistent
-	private String categoria;
+	private Categoria categoria;
 	
 	@Persistent
 	private String dni;
 	
 	@Persistent
 	private boolean activo;
+	
+	@Persistent
+	private boolean admin;
+	
 
 	public Persona(String nombre, String apellido, String direccion, String email, String categoria,
-			String dni, boolean activo) {
+			String dni, boolean activo, boolean isAdmin) {
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.direccion = direccion;
 		this.email = email;
-		this.categoria = categoria;
+		this.categoria = new Categoria(categoria, isAdmin);
 		this.dni = dni;
 		this.activo = activo;
+		this.admin = isAdmin;
 	}
 
 	public String getIdPersona() {
@@ -96,12 +101,12 @@ public class Persona {
 		this.email = email;
 	}
 
-	public String getCategoria() {
+	public Categoria getCategoria() {
 		return categoria;
 	}
 
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
+	public void setCategoria(String rol) {
+		this.categoria.setRol(rol);
 	}
 
 	public String getDni() {
@@ -118,6 +123,14 @@ public class Persona {
 
 	public void setActivo(boolean activo) {
 		this.activo = activo;
+	}
+
+	public boolean isAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(boolean admin) {
+		this.admin = admin;
 	}
 
 }

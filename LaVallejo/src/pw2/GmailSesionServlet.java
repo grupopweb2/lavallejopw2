@@ -37,7 +37,6 @@ public class GmailSesionServlet extends HttpServlet {
 		if(user == null){
 			resp.sendRedirect(us.createLoginURL(req.getRequestURI()));
 		}else{
-			System.out.println("busqueda del gmail servelt");
 			for(Persona p: personas) {
 				if (user.getEmail().equalsIgnoreCase(p.getEmail())) {
 					req.setAttribute("login", p);
@@ -46,8 +45,9 @@ public class GmailSesionServlet extends HttpServlet {
 					return;
 				}
 			}
-			System.out.println("no encontro gmail");
-			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/prelogin.html");
+			req.setAttribute("personax", user);
+		
+			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/prelogin.jsp");
 			dispatcher.forward(req, resp);
 			
 		}

@@ -22,12 +22,14 @@ public class RegistrarServlet extends HttpServlet {
 		String nacimiento = req.getParameter("nacimiento");
 		String categoria = req.getParameter("categoria");
 		String dni = req.getParameter("dni");
+		boolean admi = req.getParameter("admi")!=null? true:false;;
+		System.out.println("admi: "+admi);
 				 
 		final PersistenceManager pm = PMF.get().getPersistenceManager();		
 		
 		try{
 			Key key;
-			Persona p = new Persona(nombre, apellido, direccion, email, categoria, dni, true);
+			Persona p = new Persona(nombre, apellido, direccion, email, categoria, dni, true, admi);
 			try{
 				pm.makePersistent(p);
 				req.setAttribute("login", p);
@@ -35,7 +37,7 @@ public class RegistrarServlet extends HttpServlet {
 				dispatcher.forward(req, resp);
 			}catch(Exception e){
 				System.out.println(e);
-				resp.getWriter().println("Ocurrio un error, vuelva a intentarlo.");
+				System.out.println("Ocurrio un error, vuelva a intentarlo.");
 				resp.sendRedirect("index.html");
 			}
 		}catch(Exception e){

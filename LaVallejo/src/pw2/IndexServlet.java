@@ -30,13 +30,13 @@ public class IndexServlet extends HttpServlet {
 
 			// exraccion de la lista de personas registrados:
 			PersistenceManager pm = PMF.get().getPersistenceManager();
-			String query = "select from " + Persona.class.getName();
+			String query = "select from " + Persona.class;
 			List<Persona> personas = (List<Persona>) pm.newQuery(query).execute();
 			//////
 			System.out.println("busqueda correcta index servlet");
 			for(Persona p: personas) {
 				if (user.getEmail().equalsIgnoreCase(p.getEmail())) {
-					req.setAttribute("alumnologgin", p);
+					req.setAttribute("personalogin", p);
 					RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/index.jsp");
 					dispatcher.forward(req, resp);
 					return;
