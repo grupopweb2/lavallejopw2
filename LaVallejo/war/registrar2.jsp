@@ -1,7 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -78,7 +74,7 @@
    <ul class="navbar">
    <li><a href="registrar.jsp"><div class='barra'></div><p class='menu'>Registrarse</p></a></li>
    
-	<li><a href='index.jsp'><div class='barra'></div><p class='menu'>Pagina Principal</p></a></li>
+	<li><a href='index'><div class='barra'></div><p class='menu'>Pagina Principal</p></a></li>
   </ul>
   </aside>
    <nav>
@@ -98,19 +94,19 @@
 				<td><input type="text" name="apellido"  required></td>
 			</tr>
 			<tr>
-				<td>Género:</td>
-				<td><select name="genero" class="todo">
-						<option value="masculino">Masculino</option>
-						<option value="femenino">Femenino</option>
+				<td>Genero:</td>
+				<td><select name="sexo" class="todo">
+						<option value="M">Masculino</option>
+						<option value="F">Femenino</option>
 				</select></td>
 			</tr>
 			<tr>
-				<td>Dirección:</td>
+				<td>Direccion:</td>
 				<td><input type="text" name="direccion" required></td>
 			</tr>
 			<tr>
-				<td>Correo electrónico:</td>
-					<td><input type="text"  name="email"></a>
+				<td>Correo electronico:</td>
+					<td><input type="text"  name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required></a>
 				</td>
 			</tr>
 			<tr>
@@ -124,15 +120,15 @@
 						<option value="particular">particular</option>
 						<option value="alumno">alumno</option>
 						<option value="padre">padre</option>
-						<option value="profesor">profesor</option>
-						<option value="director">director</option>
+						<option value="docente">docente</option>
+						<option value="personal">personal</option>
 					</select>
 				</td>
 			</tr>
 			
 			<tr>
 				<td>DNI:</td>
-				<td><input type="text" name="dni" required></td>
+				<td><input type="text" placeholder="12345678" name="dni" size="8" pattern="[0-9]{8}" maxlength="8" required></td>
 			</tr>
 			<tr>
 				<td><input type="checkbox" name="admi" value="true"> admin</td>
@@ -143,8 +139,7 @@
 			</tr>
 		</table>
 	</form>
-		<fieldset>
-	</form>
+	<fieldset>
 	</center>
 	 </nav>
 </body>
