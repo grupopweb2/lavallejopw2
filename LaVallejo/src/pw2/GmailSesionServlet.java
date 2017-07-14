@@ -18,38 +18,24 @@ import com.google.appengine.api.users.UserServiceFactory;
 public class GmailSesionServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException, ServletException {
-		resp.setContentType("text/html");
-
-		PrintWriter out = resp.getWriter();
-
+		
 		UserService us = UserServiceFactory.getUserService();
 		User user = us.getCurrentUser();
-		
-		
-		PersistenceManager pm = PMF.get().getPersistenceManager();
-		String query = "select from " + Persona.class.getName();
-		
-		List<Persona> personas = (List<Persona>) pm.newQuery(query).execute();
-		
-		
-		
 		
 		if(user == null){
 			resp.sendRedirect(us.createLoginURL(req.getRequestURI()));
 		}else{
-			for(Persona p: personas) {
-				if (user.getEmail().equalsIgnoreCase(p.getEmail())) {
-					req.setAttribute("login", p);
-					RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/index.jsp");
-					dispatcher.forward(req, resp);
-					return;
-				}
+			PersistenceManager pm = PMF.get().getPersistenceManager();
+			String query = "select from " + Persona.class.getName()+" where email=='"+user.getEmail()+"'";
+			List<Persona> personas = (List<Persona>) pm.newQuery(query).execute();
+			if (personas.isEmpty()) {
+				RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/prelogin.jsp");
+				dispatcher.forward(req, resp);
+			} else {
+				getServletContext().setAttribute("userLogin", personas.get(0));
+				RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/index.jsp");
+				dispatcher.forward(req, resp);
 			}
-			req.setAttribute("personax", user);
-		
-			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/prelogin.jsp");
-			dispatcher.forward(req, resp);
-			
 		}
 	}
 }

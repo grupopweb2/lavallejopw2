@@ -2,6 +2,7 @@ package pw2;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.jdo.annotations.IdentityType;
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
@@ -9,8 +10,10 @@ import javax.jdo.annotations.PrimaryKey;
 
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
+import com.google.appengine.datanucleus.annotations.Unowned;
 
-@PersistenceCapable
+
+@PersistenceCapable(identityType = IdentityType.APPLICATION)
 public class Persona {
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
@@ -23,7 +26,7 @@ public class Persona {
 	private String apellido;
 	
 	@Persistent
-	private String genero;
+	private String sexo;
 	
 	@Persistent
 	private String direccion;
@@ -35,7 +38,7 @@ public class Persona {
 	private String nacimiento;
 	
 	@Persistent
-	private Categoria categoria;
+	private String categoria;
 	
 	@Persistent
 	private String dni;
@@ -47,13 +50,15 @@ public class Persona {
 	private boolean admin;
 	
 
-	public Persona(String nombre, String apellido, String direccion, String email, String categoria,
-			String dni, boolean activo, boolean isAdmin) {
+	public Persona(String nombre, String apellido,String sexo, String direccion, String email, 
+			String nacimiento, String categoria, String dni, boolean activo, boolean isAdmin) {
 		this.nombre = nombre;
 		this.apellido = apellido;
+		this.sexo = sexo;
 		this.direccion = direccion;
 		this.email = email;
-		this.categoria = new Categoria(categoria, isAdmin);
+		this.nacimiento = nacimiento;
+		this.categoria = categoria;
 		this.dni = dni;
 		this.activo = activo;
 		this.admin = isAdmin;
@@ -84,6 +89,14 @@ public class Persona {
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
+	
+	public String getSexo() {
+		return sexo;
+	}
+	
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
 
 	public String getDireccion() {
 		return direccion;
@@ -101,12 +114,12 @@ public class Persona {
 		this.email = email;
 	}
 
-	public Categoria getCategoria() {
+	public String getCategoria() {
 		return categoria;
 	}
 
 	public void setCategoria(String rol) {
-		this.categoria.setRol(rol);
+		this.categoria = rol;
 	}
 
 	public String getDni() {
