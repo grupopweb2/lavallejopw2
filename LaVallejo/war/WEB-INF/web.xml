@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xmlns="http://java.sun.com/xml/ns/javaee"
-xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
-http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
 	<servlet>
 		<servlet-name>LaVallejo</servlet-name>
 		<servlet-class>pw2.LaVallejoServlet</servlet-class>
@@ -12,7 +12,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>LaVallejo</servlet-name>
 		<url-pattern>/lavallejo</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>GmailSesion</servlet-name>
 		<servlet-class>pw2.GmailSesionServlet</servlet-class>
@@ -60,7 +60,43 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<url-pattern>/cerrarSesion</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>Redireccionar</servlet-name>
+		<servlet-class>pw2.RedireccionarServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Redireccionar</servlet-name>
+		<url-pattern>/redireccionar</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Alumno</servlet-name>
+		<servlet-class>pw2.AlumnoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Alumno</servlet-name>
+		<url-pattern>/menualumno</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Docente</servlet-name>
+		<servlet-class>pw2.DocenteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Docente</servlet-name>
+		<url-pattern>/menudocente</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Comunicado</servlet-name>
+		<servlet-class>pw2.ComunicadoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Comunicado</servlet-name>
+		<url-pattern>/menucomunicado</url-pattern>
+	</servlet-mapping>
+	
 	<welcome-file-list>
-		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index</welcome-file>
 	</welcome-file-list>
 </web-app>
